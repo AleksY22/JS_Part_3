@@ -76,4 +76,32 @@ function myAnimation() {
 const btn = document.querySelector('.btn');
 btn.addEventListener('click', myAnimation);
 */
+/*
+//===========Работа с данными=========================
+//учитывается часовой пояс
+const now = new Date();
+console.log(now);
+
+console.log(now.getFullYear()); //2024
+console.log(now.getMonth()); //2 отсчет начинается с 0
+console.log(now.getDate()); //18 число
+console.log(now.getDay()); //1
+
+console.log(now.getTimezoneOffset()); //-180
+console.log(now.getTime()); //1710787964741 секунды с начала отсчета (1970г)
+
+console.log(now.setHours(18));
+
+
+let start = new Date();
+for (let i = 0; i < 100000; i++) {
+   let some = i ** 3;
+}
+
+let end = new Date();
+
+const rez = end - start;
+console.log(rez);
+*/
+
 
