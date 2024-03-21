@@ -77,7 +77,7 @@ const btn = document.querySelector('.btn');
 btn.addEventListener('click', myAnimation);
 */
 /*
-//===========Работа с данными=========================
+//===========Работа с датами=========================
 //учитывается часовой пояс
 const now = new Date();
 console.log(now);
@@ -102,6 +102,29 @@ let end = new Date();
 
 const rez = end - start;
 console.log(rez);
+*/
+/*
+//==================Функции-конструкторы==================
+function User(name, id) {
+   this.name = name;
+   this.id = id;
+   this.human = true;
+   this.hello = function () {
+      console.log(`Hello ${this.name}`);
+   }
+}
+
+User.prototype.exit = function () {
+   console.log(`User ${this.name} exit`);
+}
+
+const ivan = new User('Ivan', 28);
+const aleks = new User('Aleks', 22);
+
+console.log(ivan);
+console.log(aleks);
+aleks.hello();
+ivan.exit();
 */
 
 
