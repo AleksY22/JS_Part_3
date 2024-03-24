@@ -126,5 +126,68 @@ console.log(aleks);
 aleks.hello();
 ivan.exit();
 */
+/*
+//==================Контекст вызова this=================
+// 1) Обычная функция:
+//    при использовании 'use strict' - this = undefined
+//    без использования 'use strict' - this = window
 
+function showThis(a, b) {
+   console.log(this); //undefined
+   function sum() {
+      console.log(this); //undefined
+      return a + b; //замыкание
+   }
+   console.log(sum());
+}
 
+showThis(4, 5);
+
+// 2) Метод объекта: this = объект
+
+const obj = {
+   a: 20,
+   b: 15,
+   sum: function () {
+      console.log(this);
+   }
+};
+
+obj.sum();
+
+// 3) Функция-конструктор: this = экземпляр объекта (User)
+
+function User(name, id) {
+   this.name = name;
+   this.id = id;
+   this.human = true;
+   this.hello = function () {
+      console.log(`Hello ${this.name}`);
+   }
+}
+
+let ivan = new User('Ivan', 23);
+
+// 4) Ручное присвоение контекста (call, apply, bind): this = объект
+
+function sayName(surname) {
+   console.log(this);
+   console.log(this.name + surname);
+}
+
+const user = {
+   name: 'John'
+};
+
+sayName.call(user, 'Smith');
+sayName.apply(user, ['Smith']);
+
+function count(num) {
+   return this * num;
+}
+
+const double = count.bind(2); //this = 2
+console.log(double(3));
+
+// !!!! у стрелочных функций нет контекста вызова (берет у родителя)
+*/
