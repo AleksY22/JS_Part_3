@@ -191,7 +191,7 @@ console.log(double(3));
 
 // !!!! у стрелочных функций нет контекста вызова (берет у родителя)
 */
-
+/*
 //==================Классы=============================
 
 class Rectangle {
@@ -221,3 +221,5 @@ console.log(square.calcArea());
 const div = new ColoredRectangleWithText(10, 15, 'rect', 'red');
 div.showMyProps();
 console.log(div.calcArea());
+*/
+
