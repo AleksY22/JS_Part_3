@@ -222,4 +222,3 @@ const div = new ColoredRectangleWithText(10, 15, 'rect', 'red');
 div.showMyProps();
 console.log(div.calcArea());
 */
-
